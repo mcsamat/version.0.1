@@ -3,6 +3,7 @@
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
     <RootNamespace>version._0._1</RootNamespace>
+    <UserSecretsId>0ad17ca2-b70a-4e6e-b237-226a9587e8d8</UserSecretsId>
   </PropertyGroup>
 
   <ItemGroup>
