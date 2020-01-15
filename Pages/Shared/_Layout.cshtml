@@ -1,0 +1,73 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Financial Manager</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+            <div class="container">
+                <a class="navbar-brand" asp-area="" asp-page="/Index">FinMan</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
+                    <ul class="navbar-nav flex-grow-1">
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-page="/Index">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-page="/Privacy">Privacy</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="container">
+        <main role="main" class="pb-3">
+            <div class="container">
+                <div class="row">
+                    <div class="col-10">
+                        @RenderBody()
+                    </div>
+                    <div class="col">
+                        <div class="btn-group-vertical">
+                            <br/><br/><br/><br/>
+                            <button type="button" class="btn btn-dark"><a href="/Trans/">Dashboard</a></button>
+                            <button type="button" class="btn btn-dark">Full Table</button>
+                            <button type="button" class="btn btn-dark">Revenue</button>
+                            <button type="button" class="btn btn-dark"><a href="/Bills/">Bills</a></button>
+                            <button type="button" class="btn btn-dark">Reocurring Expenses</button>
+                            <button type="button" class="btn btn-dark">Allowance Account</button>
+                            <button type="button" class="btn btn-dark"><a href="/Savings/">Savings</a></button>
+                            <button type="button" class="btn btn-dark">Wishlist</button>
+                            <button type="button" class="btn btn-dark">Plan Big Purchases</button>
+                            <button type="button" class="btn btn-dark">Debt Payment Calculator</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+        </main>
+    </div>
+
+    <footer class="border-top footer text-muted">
+        <div class="container">
+            &copy; 2020 - Davide Tamas - <a asp-area="" asp-page="/Privacy">Privacy</a>
+        </div>
+    </footer>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+
+    @RenderSection("Scripts", required: false)
+</body>
+</html>

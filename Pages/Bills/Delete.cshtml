@@ -1,0 +1,65 @@
+﻿@page
+@model version._0._1.DeleteModelB
+
+@{
+    ViewData["Title"] = "Delete";
+    Layout = "~/Pages/Shared/_Layout.cshtml";
+}
+
+<h1>Delete</h1>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Trans</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Trans.Name)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Trans.Name)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Trans.Amnt)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Trans.Amnt)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Trans.Date)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Trans.Date)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Trans.Nature)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Trans.Nature)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Trans.Cat)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Trans.Cat)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Trans.Pattern)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Trans.Pattern)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Trans.Notes)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Trans.Notes)
+        </dd>
+    </dl>
+    
+    <form method="post">
+        <input type="hidden" asp-for="Trans.ID" />
+        <input type="submit" value="Delete" class="btn btn-danger" /> |
+        <a asp-page="./Index">Back to List</a>
+    </form>
+</div>

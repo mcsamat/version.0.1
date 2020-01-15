@@ -1,0 +1,66 @@
+﻿@page
+@model version._0._1.EditModel
+
+@{
+    ViewData["Title"] = "Edit";
+    Layout = "~/Pages/Shared/_Layout.cshtml";
+}
+
+<h1>Edit</h1>
+
+<h4>Trans</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Trans.ID" />
+            <div class="form-group">
+                <label asp-for="Trans.Name" class="control-label"></label>
+                <input asp-for="Trans.Name" class="form-control" />
+                <span asp-validation-for="Trans.Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Trans.Amnt" class="control-label"></label>
+                <input asp-for="Trans.Amnt" class="form-control" />
+                <span asp-validation-for="Trans.Amnt" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Trans.Date" class="control-label"></label>
+                <input asp-for="Trans.Date" class="form-control" />
+                <span asp-validation-for="Trans.Date" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Trans.Nature" class="control-label"></label>
+                <input asp-for="Trans.Nature" class="form-control" />
+                <span asp-validation-for="Trans.Nature" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Trans.Cat" class="control-label"></label>
+                <input asp-for="Trans.Cat" class="form-control" />
+                <span asp-validation-for="Trans.Cat" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Trans.Pattern" class="control-label"></label>
+                <input asp-for="Trans.Pattern" class="form-control" />
+                <span asp-validation-for="Trans.Pattern" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Trans.Notes" class="control-label"></label>
+                <input asp-for="Trans.Notes" class="form-control" />
+                <span asp-validation-for="Trans.Notes" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="./Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
